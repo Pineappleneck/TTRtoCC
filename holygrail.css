@@ -1,0 +1,132 @@
+/* Apply to all elements */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    color: black;
+}
+li {
+    font-size: 1px;
+}
+/* COLORS and FONTS */
+.pictures{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    width: 100%;
+  }
+body {
+    color: rgb(22, 21, 21);
+    text-align: center;
+}
+
+/* Can choose to default to special layout or desktop layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    }
+
+header {
+    height: 100px;
+    background: #07ED0E;
+    font-size: 150%;
+}
+
+main {
+    background: #6AF018;
+    text-align: left;
+}
+
+footer {
+    background: #e1f7f7;
+}
+
+.right-sidebar {
+    background: #07EDAA;
+    color: gainsboro;
+}
+
+/* full screen type layout */
+@media all and (min-width: 768px) {
+    .container {
+    flex-direction: row;
+   flex-wrap: wrap; 
+   }
+  header,
+  footer {
+    width: 100%;
+    }
+   main {
+   flex: 2;
+     order: 2;
+   /* vh is viewport height, a screen unit */
+ min-height: 80vh;
+   }
+  
+  .right-sidebar {
+     flex: 1;
+     order: 3;
+   }
+   footer {
+   order: 4;
+   }
+    }
+    .flip-card {
+        background-color: transparent;
+        width: 250px;
+        height: 205px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+      
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 0em;
+    }
+    .card {
+        background: blue;
+        margin-bottom: 0em;
+    }
+li a {
+    font-size: 25px;
+}
